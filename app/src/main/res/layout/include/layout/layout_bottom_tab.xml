@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.wangzijie.nutrition.user.utils.BottomTabLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_tab_home"
+    android:layout_width="match_parent"
+    android:layout_height="49dp"
+    android:background="#fff">
+
+    <RadioButton
+        android:id="@+id/navigation_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:button="@null"
+        android:checked="true"
+        android:drawableTop="@drawable/bottom_select"
+        android:text="首页"
+        android:textColor="@color/home_textcloor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="59dp"
+        tools:layout_editor_absoluteY="682dp" />
+
+
+    <RadioButton
+        android:id="@+id/navigation_Dietitian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:button="@null"
+        android:drawableTop="@drawable/bottom_ysselect"
+        android:text="消息"
+        android:textColor="@color/home_textcloor"
+        app:layout_constraintBottom_toBottomOf="@+id/navigation_home"
+        app:layout_constraintEnd_toStartOf="@+id/navigation_find"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/navigation_home"
+        app:layout_constraintTop_toTopOf="@+id/navigation_home" />
+
+    <RadioButton
+        android:id="@+id/navigation_find"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@null"
+        android:drawableTop="@drawable/bottom_lookselect"
+        android:text="发现"
+        android:textColor="@color/home_textcloor"
+        app:layout_constraintBottom_toBottomOf="@+id/navigation_Dietitian"
+        app:layout_constraintEnd_toStartOf="@+id/navigation_mimne"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/navigation_Dietitian"
+        app:layout_constraintTop_toTopOf="@+id/navigation_Dietitian" />
+
+
+    <RadioButton
+        android:id="@+id/navigation_mimne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:button="@null"
+        android:drawableTop="@drawable/bottom_myselect"
+        android:text="我的"
+        android:textColor="@color/home_textcloor"
+        app:layout_constraintBottom_toBottomOf="@+id/navigation_find"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/navigation_find" />
+
+
+</com.wangzijie.nutrition.user.utils.BottomTabLayout>

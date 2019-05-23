@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hyphenate="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.hyphenate.easeui.widget.EaseTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        hyphenate:layout_constraintEnd_toEndOf="parent"
+        hyphenate:layout_constraintStart_toStartOf="parent"
+        hyphenate:layout_constraintTop_toTopOf="parent"
+        hyphenate:titleBarLeftImage="@drawable/ease_mm_title_back"
+        hyphenate:titleBarTitle="选择群成员" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        hyphenate:layout_constraintBottom_toBottomOf="parent"
+        hyphenate:layout_constraintEnd_toEndOf="parent"
+        hyphenate:layout_constraintStart_toStartOf="parent"
+        hyphenate:layout_constraintTop_toBottomOf="@+id/title_bar"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/commit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="8dp"
+        android:text="完成"
+        hyphenate:layout_constraintBottom_toBottomOf="@+id/title_bar"
+        hyphenate:layout_constraintEnd_toEndOf="@+id/title_bar"
+        hyphenate:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

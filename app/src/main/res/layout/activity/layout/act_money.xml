@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/layout_title"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="@dimen/dp_17">
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:text="订单编号："
+            android:textColor="#333333"
+            android:textSize="@dimen/sp_15" />
+
+        <TextView
+            android:id="@+id/tv_orderId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textSize="@dimen/sp_15"
+            android:textColor="#333333"
+            android:text="222225522135" />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="#CCCCCC"/>
+
+    <TextView
+        android:id="@+id/money_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="@dimen/dp_17"
+        android:text="您购买张三营养师服务一年（365）天"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ding_recycle"
+        android:layout_width="match_parent"
+        android:layout_height="98dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="17dp"
+        android:layout_marginEnd="15dp"
+        android:visibility="visible" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="#CCCCCC"/>
+
+
+    <TextView
+        android:id="@+id/textView98"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:text="总金额："
+        android:textColor="#F52823"
+        android:textSize="@dimen/sp_24"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView57"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/weixin" />
+
+        <TextView
+            android:id="@+id/textView103"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="微信支付"
+            android:textColor="#666666"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView57"
+            app:layout_constraintStart_toEndOf="@+id/imageView57"
+            app:layout_constraintTop_toTopOf="@+id/imageView57" />
+
+        <ImageView
+            android:id="@+id/imageView58"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginTop="17dp"
+            app:layout_constraintStart_toStartOf="@+id/imageView57"
+            app:layout_constraintTop_toBottomOf="@+id/imageView57"
+            app:srcCompat="@drawable/zifubao" />
+
+        <TextView
+            android:id="@+id/textView104"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="支付宝支付"
+            android:textColor="#666666"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView58"
+            app:layout_constraintStart_toEndOf="@+id/imageView58"
+            app:layout_constraintTop_toTopOf="@+id/imageView58" />
+
+        <Button
+            android:id="@+id/money_btn"
+            android:layout_width="149dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="54dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/jvsecent"
+            android:text="确定支付"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView104" />
+
+
+        <RadioGroup
+            android:id="@+id/radiogroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:gravity="center_horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/textView104"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView103">
+
+            <RadioButton
+                android:id="@+id/radioButton3"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/item_zifu"
+                android:button="@null"
+                android:tag="1"
+                android:textColor="@color/white_255"
+                app:layout_constraintBottom_toBottomOf="@+id/textView104"
+                app:layout_constraintEnd_toEndOf="@+id/radioButton4"
+                app:layout_constraintTop_toTopOf="@+id/textView104" />
+
+            <RadioButton
+                android:id="@+id/radioButton4"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="24dp"
+                android:layout_marginTop="@dimen/dp_18"
+                android:background="@drawable/item_zifu"
+                android:button="@null"
+                android:tag="2"
+                app:layout_constraintBottom_toBottomOf="@+id/textView103"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView103" />
+        </RadioGroup>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

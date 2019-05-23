@@ -1,0 +1,204 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'kotlin-android'
+//apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+    defaultConfig {
+        applicationId "com.wangzijie.nutrition.user"
+        minSdkVersion 17
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        packagingOptions {
+            exclude 'META-INF/proguard/androidx-annotations.pro'
+        }
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+
+        ndk {
+            //设置支持的SO库架构
+            abiFilters "armeabi-v7a", "x86", "arm64-v8a", "x86_64"
+
+        }
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            //是否移除无用资源
+            zipAlignEnabled true
+            signingConfig signingConfigs.debug
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            //是否移除无用资源
+            zipAlignEnabled true
+            signingConfig signingConfigs.debug
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    signingConfigs {
+        debug {
+            storeFile file('../key.jks')
+            storePassword "888888"
+            keyAlias "nutrition"
+            keyPassword "888888"
+        }
+        release {
+            storeFile file('../key.jks')
+            storePassword "888888"
+            keyAlias "nutrition"
+            keyPassword "888888"
+        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+        }
+    }
+
+//    sourceSets {
+//        main {
+//            res.srcDirs = [
+//                            'src/main/res/layout/activity',
+//                            'src/main/res/layout/fragment',
+//                            'src/main/res/layout/item',
+//                            'src/main/res/layout/include',
+//                            'src/main/res/layout/easeui',
+//                            'src/main/res/layout/dialog',
+//                            //下面两个是固定兼容写法
+//                            'src/main/res/layout',
+//                            'src/main/res'
+//                    ]
+//        }
+//    }
+
+    def listSubFile = {
+        def resFolder = 'src/main/res/layout'
+        def files = file(resFolder).listFiles()
+        def folders = []
+        files.each {
+            item -> folders.add(item.absolutePath)
+        }
+//        folders.add(file(resFolder))
+        folders.add(file(resFolder).parentFile.absolutePath)
+        return folders
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            res.srcDirs = listSubFile()
+        }
+    }
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+        incremental false
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.0.0-beta01'
+    implementation 'com.google.android.material:material:1.0.0-beta01'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.0'
+    implementation 'androidx.cardview:cardview:1.0.0-beta01'
+    implementation 'androidx.vectordrawable:vectordrawable:1.0.0-beta01'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0-beta01'
+    testImplementation 'junit:junit:4.12'
+    //    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'
+    // glide
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    // Google firebase cloud messaging
+    implementation 'com.google.android.gms:play-services-base:11.4.0'
+    implementation 'com.google.firebase:firebase-messaging:11.4.0'
+    implementation 'com.parse:parse-android:1.13.1'
+    implementation('com.github.bumptech.glide:recyclerview-integration:4.8.0') {
+        // Excludes the support library because it's already included by Glide.
+        transitive = false
+    }
+    //rxjava rxandroid
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.0'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    // retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    //阿里
+    implementation 'com.aliyun.dpa:oss-android-sdk:+'
+    implementation(name: 'alipaySdk', ext: 'aar')
+    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+    implementation 'com.squareup.okio:okio:1.14.0'
+
+    // json
+    implementation 'com.google.code.gson:gson:2.8.4'
+    //微信支付
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    //ui
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-14'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-14'
+    //没有使用特殊Header，可以不加这行
+    implementation 'com.ldoublem.loadingview:loadingviewlib:1.0'
+    implementation 'com.youth.banner:banner:1.4.10'
+    //最新版本
+    implementation 'com.github.chaychan:MultipleItemRvAdapter:1.0.4'
+    //    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.hyman:flowlayout-lib:1.1.2'
+    // butterknife
+    implementation 'com.jakewharton:butterknife:10.1.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
+    //recyclerview
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    //HTML解析器
+    implementation 'org.jsoup:jsoup:1.11.3'
+    //banner
+    implementation 'com.youth.banner:banner:1.4.10'
+    //线形图
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+    //环信UI
+    implementation project(':easeui')
+    //UM友盟
+    implementation files('libs/umeng-share-core-6.9.4.jar')
+    implementation files('libs/umeng-share-QQ-simplify-6.9.4.jar')
+    implementation files('libs/umeng-share-sina-simplify-6.9.4.jar')
+    implementation files('libs/umeng-share-wechat-simplify-6.9.4.jar')
+    implementation files('libs/umeng-shareboard-widget-6.9.4.jar')
+    implementation files('libs/umeng-sharetool-6.9.4.jar')
+    implementation files('libs/umeng-common-2.0.2.jar')
+    //侧滑list
+    implementation 'com.baoyz.swipemenulistview:library:1.3.0'
+
+    implementation project(path: ':imagepicker')
+    implementation project(path: ':StickyListLibrary')
+    implementation project(path: ':library')
+    implementation files('libs/commons-net-3.6.jar')
+
+    implementation 'org.greenrobot:eventbus:3.0.0'
+
+}

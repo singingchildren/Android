@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl_my_nutritionist_message_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="144dp"
+    android:layout_marginLeft="@dimen/dp_15"
+    android:layout_marginTop="@dimen/dp_16"
+    android:layout_marginRight="@dimen/dp_15"
+    android:layout_marginBottom="@dimen/dp_16"
+    android:background="@drawable/write_center">
+
+    <ImageView
+        android:id="@+id/dietic_imagehead"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/head"
+        android:scaleType="centerCrop"
+        android:layout_width="78dp"
+        android:layout_height="@dimen/dp_78"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/details_name"
+        app:layout_constraintStart_toEndOf="@+id/dietic_imagehead"
+        app:layout_constraintTop_toTopOf="@+id/dietic_imagehead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="名字"
+        android:textColor="#333333"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView49"
+        app:layout_constraintStart_toEndOf="@+id/dietic_imagehead"
+        app:layout_constraintTop_toBottomOf="@+id/details_name"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:text="名称："
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/details_username"
+        app:layout_constraintStart_toEndOf="@+id/textView49"
+        app:layout_constraintTop_toTopOf="@+id/textView49"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/textView58"
+        app:layout_constraintStart_toStartOf="@+id/textView49"
+        app:layout_constraintTop_toBottomOf="@+id/textView49"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="账号："
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/detalis_id"
+        app:layout_constraintStart_toEndOf="@+id/textView58"
+        app:layout_constraintTop_toBottomOf="@+id/textView49"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="TextView"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/textView60"
+        app:layout_constraintStart_toStartOf="@+id/textView58"
+        app:layout_constraintTop_toBottomOf="@+id/textView58"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="地区:"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/details_region"
+        app:layout_constraintStart_toEndOf="@+id/textView60"
+        app:layout_constraintTop_toTopOf="@+id/textView60"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:id="@+id/ll_label_my_nutritionist"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView60"
+        app:layout_constraintTop_toBottomOf="@+id/textView60"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <CheckBox
+            android:checked="true"
+            android:id="@+id/tv1_label_my_nutritionist"
+            style="@style/label"
+            android:text="体重管理" />
+
+        <CheckBox
+            android:checked="true"
+            android:id="@+id/tv2_label_my_nutritionist"
+            style="@style/label"
+            android:text="慢病" />
+
+        <CheckBox
+            android:checked="true"
+            android:id="@+id/tv3_label_my_nutritionist"
+            style="@style/label"
+            android:text="慢病" />
+
+        <CheckBox
+            android:checked="true"
+            android:id="@+id/tv4_label_my_nutritionist"
+            style="@style/label"
+            android:text="慢病" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

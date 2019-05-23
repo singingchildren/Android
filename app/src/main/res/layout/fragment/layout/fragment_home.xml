@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE"
+    android:orientation="vertical"
+    android:scrollbars="none"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_header_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/write"
+            android:paddingBottom="10dp">
+
+
+            <com.youth.banner.Banner
+                android:id="@+id/banner_home_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="179dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@drawable/ic_launcher_background"/>
+
+
+            <TextView
+                android:id="@+id/tv_city_site_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="20dp"
+                android:text="北京"
+                android:textColor="@color/write"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <LinearLayout
+                android:id="@+id/home_lin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="45dp"
+                android:background="@drawable/edit_backgroud"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_city_site_home"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_city_site_home"
+                app:layout_constraintTop_toTopOf="@+id/tv_city_site_home">
+
+                <ImageView
+                    android:id="@+id/iv_search_home"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:paddingTop="@dimen/dp_5"
+                    android:paddingRight="@dimen/dp_10"
+                    android:paddingBottom="5dp"
+                    android:scaleType="center"
+                    app:srcCompat="@drawable/find" />
+
+                <EditText
+                    android:id="@+id/edt_search_home"
+                    android:layout_width="271dp"
+                    android:layout_height="31dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="8"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:gravity="center_vertical"
+                    android:hint="输入关键字进行搜索"
+                    android:paddingLeft="5dp"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_city_site_home"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_city_site_home" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_scan_home"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginRight="19dp"
+                app:layout_constraintBottom_toBottomOf="@+id/home_lin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/home_lin"
+                app:srcCompat="@drawable/sao" />
+
+            <ImageView
+                android:id="@+id/imageView52"
+                android:layout_width="15dp"
+                android:layout_height="6dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="6dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_city_site_home"
+                app:layout_constraintEnd_toStartOf="@+id/home_lin"
+                app:layout_constraintStart_toEndOf="@+id/tv_city_site_home"
+                app:layout_constraintTop_toTopOf="@+id/tv_city_site_home"
+                app:srcCompat="@drawable/daosan" />
+
+            <ImageView
+                android:id="@+id/home_portal_image1"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="185dp"
+                android:src="@drawable/nv1"
+                app:layout_constraintEnd_toStartOf="@+id/home_portal_image2"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/home_portal_image2"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/nv2"
+                app:layout_constraintBottom_toBottomOf="@+id/home_portal_image1"
+                app:layout_constraintEnd_toStartOf="@+id/home_portal_image3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/home_portal_image1"
+                app:layout_constraintTop_toTopOf="@+id/home_portal_image1" />
+
+            <ImageView
+                android:id="@+id/home_portal_image3"
+                android:layout_width="70dp"
+                android:layout_height="71dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/nv3"
+                app:layout_constraintBottom_toBottomOf="@+id/home_portal_image2"
+                app:layout_constraintEnd_toStartOf="@+id/home_portal_image4"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/home_portal_image2"
+                app:layout_constraintTop_toTopOf="@+id/home_portal_image2" />
+
+            <ImageView
+                android:id="@+id/home_portal_image4"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="3dp"
+                android:src="@drawable/nv4"
+                app:layout_constraintBottom_toTopOf="@+id/home_portal_text2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/home_portal_image3"
+                app:layout_constraintTop_toTopOf="@+id/home_portal_image3" />
+
+            <TextView
+                android:id="@+id/home_portal_text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="健康乐园"
+                android:textColor="#333333"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="@+id/home_portal_image1"
+                app:layout_constraintStart_toStartOf="@+id/home_portal_image1"
+                app:layout_constraintTop_toBottomOf="@+id/home_portal_image1" />
+
+            <TextView
+                android:id="@+id/home_portal_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="体验店"
+                android:textColor="#333333"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="@+id/home_portal_image2"
+                app:layout_constraintStart_toStartOf="@+id/home_portal_image2"
+                app:layout_constraintTop_toBottomOf="@+id/home_portal_image2" />
+
+            <TextView
+                android:id="@+id/home_portal_text3"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:text="我的报告"
+                android:textColor="#333333"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="@+id/home_portal_image3"
+                app:layout_constraintStart_toStartOf="@+id/home_portal_image3"
+                app:layout_constraintTop_toTopOf="@+id/home_portal_text2" />
+
+            <TextView
+                android:id="@+id/home_portal_text4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我的营养师"
+                android:textColor="#333333"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="@+id/home_portal_image4"
+                app:layout_constraintStart_toStartOf="@+id/home_portal_image4"
+                app:layout_constraintTop_toBottomOf="@+id/home_portal_image4" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_nutritionist_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/write_center">
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="11dp"
+                android:text="优秀营养师"
+                android:textColor="#252424"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_nutritionist_more_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:text="更多"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView10" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcv_dietitian_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_14"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView10"
+                tools:itemCount="1"
+                tools:listitem="@layout/item_dietitian_home" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_studio_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/write_center">
+
+            <TextView
+                android:id="@+id/home_work"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="8dp"
+                android:clickable="false"
+                android:text="优秀营养师工作室"
+                android:textColor="#252424"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/iv_studio_logo_home_fragment"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/more_studio_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:text="更多"
+                app:layout_constraintBottom_toBottomOf="@+id/home_work"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/home_work" />
+
+            <ImageView
+                android:id="@+id/iv_studio_logo_home_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/studio_image"/>
+            <!--android:text="昆明营养工作室"-->
+            <TextView
+                android:id="@+id/home_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="16dp"
+                android:clickable="false"
+                android:textColor="@color/write"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_studio_logo_home_fragment"
+                app:layout_constraintStart_toStartOf="@+id/iv_studio_logo_home_fragment" />
+            <!--app:srcCompat="@drawable/ic_launcher_background"-->
+
+            <ImageView
+                android:id="@+id/home_zan_image"
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
+                android:layout_marginEnd="7dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_studio_agree_count_home"
+                app:layout_constraintEnd_toStartOf="@+id/tv_studio_agree_count_home"
+                android:src="@drawable/dian"/>
+            <!--android:text="1"-->
+            <TextView
+                android:id="@+id/tv_studio_agree_count_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_12"
+                android:layout_marginBottom="@dimen/dp_18"
+                android:textSize="@dimen/dp_10"
+                android:textColor="@color/write"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_studio_logo_home_fragment"
+                app:layout_constraintEnd_toEndOf="@+id/iv_studio_logo_home_fragment" />
+
+            <TextView
+                android:id="@+id/tv_studio_name_home_fragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:text="TextView"
+                android:textColor="@color/write"
+                app:layout_constraintStart_toStartOf="@+id/iv_studio_logo_home_fragment"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_studio_logo_home_fragment" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_customization_home"
+            android:layout_width="match_parent"
+            android:layout_height="185dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/write_center">
+
+            <TextView
+                android:id="@+id/textView81"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:clickable="false"
+                android:text="高级营养师定制化服务"
+                android:textColor="#252424"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView0"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                android:clickable="false"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView81"
+                app:layout_constraintVertical_bias="1.0"
+                 />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/write_center">
+
+            <TextView
+                android:id="@+id/tv1_title_list_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:text="营养健康文章"
+                android:textColor="#252424"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/tv_video_more_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:text="更多"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv1_title_list_home" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcv1_home_fragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="16dp"
+                tools:listitem="@layout/item_health_advisory"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv1_title_list_home" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--<androidx.constraintlayout.widget.ConstraintLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="15dp"-->
+            <!--android:layout_marginTop="15dp"-->
+            <!--android:layout_marginEnd="15dp"-->
+            <!--android:visibility="gone"-->
+            <!--android:background="@drawable/write_center">-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv2_title_list_home"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="15dp"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:text="健康视频"-->
+                <!--android:textColor="#252424"-->
+                <!--android:textSize="18sp"-->
+                <!--android:textStyle="bold"-->
+                <!--app:layout_constraintStart_toStartOf="parent"-->
+                <!--app:layout_constraintTop_toTopOf="parent" />-->
+            <!--<TextView-->
+                <!--android:id="@+id/tv_video_more_home"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginEnd="15dp"-->
+                <!--android:text="更多"-->
+                <!--app:layout_constraintEnd_toEndOf="parent"-->
+                <!--app:layout_constraintTop_toTopOf="@+id/tv2_title_list_home" />-->
+
+
+            <!--<androidx.recyclerview.widget.RecyclerView-->
+                <!--android:id="@+id/rcv3_home_fragment"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="@dimen/dp_16"-->
+                <!--android:layout_marginTop="12dp"-->
+                <!--android:layout_marginRight="16dp"-->
+                <!--app:layout_constraintEnd_toEndOf="parent"-->
+                <!--app:layout_constraintStart_toStartOf="parent"-->
+                <!--app:layout_constraintTop_toBottomOf="@+id/tv2_title_list_home" />-->
+
+        <!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    </LinearLayout>
+</ScrollView>

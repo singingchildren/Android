@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white_255"
+    android:orientation="vertical"
+    tools:context=".ui.find.Act_Recommend_Details">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/title_color"
+        android:gravity="center"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+        android:id="@+id/back"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true" />
+
+        <ImageView
+        android:layout_width="10dp"
+        android:layout_height="17dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp_8"
+        android:src="@drawable/fanghui2x" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_header_item_news"
+                android:layout_width="@dimen/dp_37"
+                android:layout_height="@dimen/dp_37"
+                android:layout_marginTop="@dimen/dp_5"
+                android:src="@drawable/my" />
+
+            <TextView
+                android:id="@+id/tv_author_item_news"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@+id/iv_header_item_news"
+                android:text="福和生食疗馆"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/dp_14" />
+
+            <TextView
+                android:id="@+id/tv_introduce_item_news"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_author_item_news"
+                android:layout_alignLeft="@+id/tv_author_item_news"
+                android:layout_marginTop="@dimen/dp_7"
+                android:text="北京海淀扶贫达人团成员 三农领域创作者"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/sp_11" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_info"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/title_color"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/back2"
+            android:layout_width="10dp"
+            android:layout_height="17dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/fanghui2x" />
+
+
+        <ImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="@dimen/dp_60"
+            android:background="@drawable/my" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_author"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="福和生史料馆"
+                android:textColor="@color/white_255"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_member"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="北京海淀扶贫达人团成员"
+                    android:textColor="@color/white_255"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_autor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="三农领域作者"
+                    android:textColor="@color/white_255"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_comment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:dividerColor="@color/white_255" />
+
+
+    <include
+        android:id="@+id/bottom"
+        layout="@layout/include_news_detail_tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp" />
+
+    <include
+        android:id="@+id/bottom2"
+        layout="@layout/include_news_inout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:visibility="gone" />
+
+</LinearLayout>

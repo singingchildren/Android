@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    tools:context=".ui.act.nutritionist.ActShopRegistration">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_title" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_15"
+            android:background="@drawable/rectangle"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:padding="@dimen/dp_17"
+                android:paddingLeft="@dimen/dp_16"
+                android:paddingBottom="@dimen/dp_14"
+                android:text="填写工作室信息"
+                android:textColor="@color/helathy_pop_text"
+                android:textSize="@dimen/sp_18"
+                android:textStyle="bold" />
+
+            <include layout="@layout/line" />
+
+            <EditText
+                android:id="@+id/edt_studio_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:padding="@dimen/dp_17"
+                android:paddingLeft="@dimen/dp_16"
+                android:paddingBottom="@dimen/dp_14"
+                android:hint="请输入工作室名称"
+                android:textColor="@color/helathy_pop_text"
+                android:textSize="@dimen/sp_16" />
+
+            <include layout="@layout/line" />
+
+            <EditText
+                android:id="@+id/et_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="输入工作室地址"
+                android:inputType="text"
+                android:padding="@dimen/dp_17"
+                android:paddingLeft="@dimen/dp_16"
+                android:paddingBottom="@dimen/dp_14"
+                android:textColorHint="@color/edit_color"
+                android:textSize="@dimen/sp_14" />
+
+            <include layout="@layout/line" />
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="输入注册人姓名"
+                android:inputType="text"
+                android:padding="@dimen/dp_17"
+                android:paddingLeft="@dimen/dp_16"
+                android:paddingBottom="@dimen/dp_14"
+                android:textColorHint="@color/edit_color"
+                android:textSize="@dimen/sp_14" />
+
+            <include layout="@layout/line" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_15"
+            android:background="@drawable/rectangle"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:padding="@dimen/dp_17"
+                android:paddingLeft="@dimen/dp_16"
+                android:paddingBottom="@dimen/dp_14"
+                android:text="资料上传"
+                android:textColor="@color/helathy_pop_text"
+                android:textSize="@dimen/sp_18"
+                android:textStyle="bold" />
+
+            <include layout="@layout/line" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_15" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/commit"
+            android:layout_width="175dp"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginTop="@dimen/dp_25"
+            android:layout_marginBottom="@dimen/dp_30"
+            android:background="@drawable/commit2"
+            android:text="@string/commit"
+            android:textColor="@color/white_255" />
+    </LinearLayout>
+
+</ScrollView>
+

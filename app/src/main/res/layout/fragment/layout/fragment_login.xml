@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_login_fragment"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/rectangle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/iv_phone"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/call"
+            android:layout_marginLeft="30dp" />
+
+        <EditText
+            android:id="@+id/et_phone"
+            android:layout_width="0dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/line"
+            android:ems="10"
+            android:hint="@string/input_number"
+            android:inputType="number"
+            android:maxLength="11"
+            android:textColorHint="#999999"
+            android:textSize="@dimen/sp_14"
+            android:theme="@style/MyEditText"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_phone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_phone"
+            app:layout_constraintTop_toTopOf="@+id/iv_phone"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="5dp" />
+
+        <ImageView
+            android:id="@+id/iv_password"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toStartOf="@+id/et_phone"
+            app:layout_constraintStart_toStartOf="@+id/iv_phone"
+            app:layout_constraintTop_toBottomOf="@+id/iv_phone"
+            app:srcCompat="@mipmap/lock" />
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="0dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="30dp"
+            android:maxLength="20"
+            android:background="@drawable/line"
+            android:ems="10"
+            android:hint="@string/inputs_password"
+            android:inputType="textPassword"
+            android:textColorHint="#999999"
+            android:textSize="14sp"
+            android:theme="@style/MyEditText"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_password"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_password"
+            app:layout_constraintTop_toTopOf="@+id/iv_password"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="30dp" />
+
+        <CheckBox
+            android:id="@+id/che_automatic"
+            android:layout_width="wrap_content"
+            android:text="自动登录"
+            android:paddingLeft="5dp"
+            android:button="@drawable/che_selector"
+            android:textColor="#888"
+            app:layout_constraintTop_toTopOf="@id/tv_pass"
+            app:layout_constraintLeft_toLeftOf="@id/et_password"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:id="@+id/tv_pass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="30dp"
+            android:text="忘记密码"
+            android:textColor="#F52823"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/et_password"
+            app:layout_constraintTop_toBottomOf="@+id/et_password" />
+
+        <ImageView
+            android:id="@+id/iv_look"
+            android:layout_width="22dp"
+            android:layout_height="11dp"
+            app:layout_constraintBottom_toBottomOf="@+id/et_password"
+            app:layout_constraintEnd_toEndOf="@+id/et_password"
+            app:layout_constraintTop_toTopOf="@+id/et_password"
+            app:srcCompat="@mipmap/eyes" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/iv_weixin"
+        android:layout_width="39dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toStartOf="@+id/iv_qq"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_login_fragment"
+        app:srcCompat="@mipmap/weixin"
+        android:layout_marginLeft="50dp"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/iv_qq"
+        android:layout_width="40dp"
+        android:layout_height="39dp"
+        app:layout_constraintEnd_toStartOf="@+id/iv_weibo"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/iv_weixin"
+        app:layout_constraintTop_toTopOf="@+id/iv_weixin"
+        app:srcCompat="@mipmap/qq"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/iv_weibo"
+        android:layout_width="40dp"
+        android:layout_height="39dp"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_qq"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/iv_qq"
+        app:layout_constraintTop_toTopOf="@+id/iv_qq"
+        app:srcCompat="@mipmap/weibo"
+        android:layout_marginRight="50dp"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tv_login_fragment"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/commit"
+        android:gravity="center"
+        android:text="@string/login"
+        android:textColor="@color/white_255"
+        android:textSize="@dimen/sp_17"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_login_fragment" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

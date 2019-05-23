@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.act.nutritionist.ActMyStudio">
+    <include layout="@layout/layout_title"
+        android:id="@+id/constraintLayout10"/>
+
+    <TextView
+        android:id="@+id/introduce"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/white_255"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dp_15"
+        android:text="工作室介绍"
+        android:textColor="@color/helathy_pop_text"
+        android:textSize="@dimen/dp_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout10" />
+
+    <ImageView
+        android:id="@+id/imageView28"
+        android:layout_width="9dp"
+        android:layout_height="14dp"
+        android:layout_marginEnd="14dp"
+        app:layout_constraintBottom_toBottomOf="@+id/introduce"
+        app:layout_constraintEnd_toEndOf="@+id/introduce"
+        app:layout_constraintTop_toTopOf="@+id/introduce"
+        app:srcCompat="@drawable/icon_right" />
+
+    <TextView
+        android:id="@+id/dietitian"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/white_255"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dp_15"
+        android:text="工作室里的营养师"
+        android:textColor="@color/helathy_pop_text"
+        android:textSize="@dimen/dp_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/introduce" />
+
+    <ImageView
+        android:id="@+id/imageView29"
+        android:layout_width="9dp"
+        android:layout_height="14dp"
+        android:layout_marginEnd="14dp"
+        app:layout_constraintBottom_toBottomOf="@+id/dietitian"
+        app:layout_constraintEnd_toEndOf="@+id/dietitian"
+        app:layout_constraintTop_toTopOf="@+id/dietitian"
+        app:srcCompat="@drawable/icon_right" />
+
+    <TextView
+        android:id="@+id/tv_Invitation_code"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/white_255"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dp_15"
+        android:text="工作室邀请码"
+        android:textColor="@color/helathy_pop_text"
+        android:textSize="@dimen/dp_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dietitian" />
+
+    <TextView
+        android:id="@+id/tv_studio_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_60"
+        android:text="获取失败"
+        android:textSize="@dimen/dp_15"
+        android:clickable="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_Invitation_code"
+        app:layout_constraintTop_toTopOf="@+id/tv_Invitation_code" />
+    <TextView
+        android:id="@+id/copy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:text="复制"
+        android:textColor="#F52823"
+        android:clickable="false"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_Invitation_code"
+        app:layout_constraintEnd_toEndOf="@+id/tv_Invitation_code"
+        app:layout_constraintTop_toTopOf="@+id/tv_Invitation_code" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

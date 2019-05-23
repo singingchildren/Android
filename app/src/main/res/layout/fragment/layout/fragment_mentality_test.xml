@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFEDEDED"
+    tools:context=".ui.mine.MentalityTestFragment">
+    <RadioGroup
+        android:id="@+id/rg_mentality_test_act"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/dp_14"
+        android:background="@drawable/bg_white_radius">
+        <TextView
+            android:id="@+id/tv_problem_mentality_test_act"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dp_16"
+            android:textColor="#333333"
+            android:background="@null"
+            android:text="问题"
+            android:padding="@dimen/dp_17"/>
+        <RadioButton
+            android:id="@+id/rb1_mentality_test_act"
+            style="@style/rb_mentality_test_act_style"
+            android:text="A."/>
+        <include
+            layout="@layout/line"/>
+        <RadioButton
+            android:id="@+id/rb2_mentality_test_act"
+            style="@style/rb_mentality_test_act_style"
+            android:text="B."/>
+        <include
+            layout="@layout/line"/>
+        <RadioButton
+            android:id="@+id/rb3_mentality_test_act"
+            style="@style/rb_mentality_test_act_style"
+            android:text="C."/>
+        <include
+            layout="@layout/line"/>
+        <RadioButton
+            android:id="@+id/rb4_mentality_test_act"
+            style="@style/rb_mentality_test_act_style"
+            android:text="D."/>
+    </RadioGroup>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_34"
+        android:background="@drawable/bg_btn_mentality_test_act"
+        android:text="上一题"
+        android:textColor="@color/write"
+        android:layout_gravity="center_horizontal" />
+
+
+</LinearLayout>

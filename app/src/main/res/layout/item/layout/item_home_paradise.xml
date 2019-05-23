@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/dp_15"
+    android:paddingRight="@dimen/dp_15"
+    android:paddingStart="@dimen/dp_15"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/green_image"
+        android:layout_width="match_parent"
+        android:layout_height="136dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/write_center"
+        android:src="@drawable/bg_image_folder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:alpha="0.3"
+        android:background="@drawable/xiayuan"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/green_image"
+        app:layout_constraintEnd_toEndOf="@+id/green_image"
+        app:layout_constraintStart_toStartOf="@+id/green_image">
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/grenn_live"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout3"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout3"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout3" />
+
+
+    <TextView
+        android:id="@+id/read"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="192dp"
+        android:text="阅读"
+        android:textColor="@color/write"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout3"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout3" />
+
+
+    <TextView
+        android:id="@+id/transmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="转发"
+        android:textColor="@color/write"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/transmit_numder"
+        app:layout_constraintEnd_toStartOf="@+id/transmit_numder"
+        app:layout_constraintTop_toTopOf="@+id/transmit_numder" />
+
+
+    <TextView
+        android:id="@+id/transmit_numder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginEnd="15dp"
+        android:textColor="@color/write"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout3"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout3" />
+
+
+    <TextView
+        android:id="@+id/read_numder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/write"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/read"
+        app:layout_constraintStart_toEndOf="@+id/read"
+        app:layout_constraintTop_toTopOf="@+id/read" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

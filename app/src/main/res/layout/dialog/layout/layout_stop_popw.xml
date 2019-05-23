@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/stop_popw"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/rectangle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView36"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="8dp"
+            android:text="添加运动"
+            android:textColor="#478E37"
+            android:textSize="19sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView80"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:text="慢走"
+            android:textColor="#333333"
+            android:textSize="19sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView36" />
+
+        <TextView
+            android:id="@+id/tv_constant_unit_add_sports_pop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+            android:textColor="#666666"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView80" />
+
+        <EditText
+            android:id="@+id/stoppopw_hour"
+            android:layout_width="72dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="66dp"
+            android:layout_marginTop="11dp"
+            android:background="@drawable/grenn_bolder"
+            android:gravity="center"
+            android:text="60"
+            android:maxLength="3"
+            android:textColor="#333333"
+            android:inputType="number"
+            android:textSize="19sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_constant_unit_add_sports_pop" />
+
+        <TextView
+            android:id="@+id/textView93"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="分钟"
+            android:textColor="#333333"
+            android:textSize="19sp"
+            app:layout_constraintBottom_toBottomOf="@+id/stoppopw_hour"
+            app:layout_constraintStart_toEndOf="@+id/stoppopw_hour"
+            app:layout_constraintTop_toTopOf="@+id/stoppopw_hour" />
+
+        <TextView
+            android:id="@+id/tv_variable_unit_add_sports_pop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_24"
+            android:text="128千卡"
+            android:textColor="#333333"
+            android:textSize="19sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView93"
+            app:layout_constraintStart_toEndOf="@+id/textView93"
+            app:layout_constraintTop_toTopOf="@+id/textView93" />
+
+        <Button
+            android:id="@+id/stoppopw_btnone"
+            android:layout_width="94dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="66dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="15dp"
+            android:background="#CCCCCC"
+            android:text="取消"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/stoppopw_hour" />
+
+        <Button
+            android:id="@+id/stoppopw_btntwo"
+            android:layout_width="94dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="45dp"
+            android:layout_marginEnd="66dp"
+            android:background="#F52823"
+            android:text="确定"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/stoppopw_btnone"
+            app:layout_constraintTop_toTopOf="@+id/stoppopw_btnone" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

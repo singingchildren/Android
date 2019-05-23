@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/dp_10"
+        android:background="@drawable/rectangle">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="139dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_49"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:gravity="center_vertical"
+            android:text="@string/self_health"
+            android:textColor="@color/black_90" />
+
+        <include layout="@layout/line" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_49"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:background="@null"
+            android:hint="@string/edit_weight" />
+
+        <include layout="@layout/line" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_49"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:background="@null"
+            android:hint="@string/edit_body_fat" />
+
+        <include layout="@layout/line" />
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_49"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:background="@null"
+            android:hint="@string/edit_visceral_fat" />
+
+        <include layout="@layout/line" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_49"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:background="@null"
+            android:hint="@string/edit_muscle_mass" />
+
+        <include layout="@layout/line" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_49"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:background="@null"
+            android:hint="@string/edit_estimate" />
+
+        <include layout="@layout/line" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_49"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:background="@null"
+            android:hint="@string/edit_weight_index" />
+
+        <include layout="@layout/line" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_49"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:background="@null"
+            android:hint="@string/edit_aerobic_heart_rate" />
+
+        <include layout="@layout/line" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_49"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:background="@null"
+            android:hint="@string/edit_vital_capacity" />
+
+        <include layout="@layout/line" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_49"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:background="@null"
+            android:hint="@string/edit_blood_pressure" />
+
+        <include layout="@layout/line" />
+
+
+
+    </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView44"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:text="@string/commit" />
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

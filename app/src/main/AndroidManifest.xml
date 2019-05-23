@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.wangzijie.nutrition_user">
+
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" /> <!-- umeng -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- Required -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:appComponentFactory">
+        <activity android:name=".CustomerServiceActivity"></activity>
+        <activity android:name=".ui.act.nutritionist.AgreementActivity" />
+        <activity android:name=".ui.home.ExperienceActivity" />
+        <activity android:name=".ui.act.LocalVideoActivity" />
+        <activity android:name=".ui.mine.ServiceNeedsActivity" /> <!-- android:networkSecurityConfig="@xml/network_security_config" -->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity android:name=".StartActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.home.SiteActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ui.act.LoginActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name=".ui.act.Act_Retrieve_Password" />
+        <activity android:name=".ui.mine.MyAssessActivity" />
+        <activity android:name=".ui.mine.Act_about_us" />
+        <activity android:name=".ui.mine.Act_Personal_Documents" />
+        <activity android:name=".ui.mine.HealthRecordActivity" />
+        <activity android:name=".ui.mine.Act_Upload_Report" />
+        <activity android:name=".ui.mine.Act_History" />
+        <activity android:name=".ui.mine.Act_Amend" />
+        <activity android:name=".ui.mine.Act_Persion" />
+        <activity android:name=".ui.mine.Act_Change_Name" />
+        <activity android:name=".ui.mine.Act_Change_Nickname" />
+        <activity android:name=".ui.mine.Act_Asign" />
+        <activity android:name=".ui.mine.Act_Modify" />
+        <activity android:name=".ui.mine.Act_Collection" />
+        <activity android:name=".ui.home.StudioActivity" />
+        <activity android:name=".ui.home.More_DetailsActivity" />
+        <activity android:name=".ui.home.MoreActivity" />
+        <activity android:name=".ui.home.HealthArticlesActivity" />
+        <activity android:name=".WebActivity" />
+        <activity android:name=".SimpleWebActivity" />
+        <activity android:name=".ui.find.Act_List_Comment" />
+        <activity android:name=".ui.find.Act_Recommend_Details" />
+        <activity android:name=".ui.home.ReportActivity" />
+        <activity android:name=".ui.home.SeekActivity" />
+        <activity android:name=".ui.mine.MyVipActivity" />
+        <activity android:name=".ui.mine.MyDingActivity" />
+        <activity android:name=".ui.mine.GeqianActivity" />
+        <activity android:name=".ui.mine.AssFoodtwoActivity" />
+        <activity android:name=".ui.mine.AssfoodcontentActivity" />
+        <activity android:name=".ui.mine.AddFoodActivity" />
+        <activity android:name=".ui.mine.MoneyActivity" />
+        <activity android:name=".ui.mine.SchemeSleepActivity" />
+        <activity android:name=".ui.mine.SchemeSportActivity" />
+        <activity android:name=".ui.mine.MentalityTestActivity" />
+        <activity android:name=".ui.mine.HealthGuidelinesActivity" />
+        <activity android:name=".ui.act.nutritionist.ActJoinStudio" />
+        <activity
+            android:name=".chatui.ui.GroupsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".chatui.ui.ChatActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustResize" /> <!-- 群组详情 -->
+        <activity
+            android:name=".chatui.ui.GroupDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" /> <!-- 聊天室详情 -->
+        <activity
+            android:name=".chatui.ui.ChatRoomDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" /> <!-- 新建聊天室 -->
+        <activity
+            android:name=".chatui.ui.NewChatRoomActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan" /> <!-- 新建群组 -->
+        <activity
+            android:name=".chatui.ui.NewGroupActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan" /> <!-- 退出群组提示框 -->
+        <activity
+            android:name=".chatui.ui.ExitGroupDialog"
+            android:theme="@style/MyDialogStyleBottom" /> <!-- 群组选人 -->
+        <activity
+            android:name=".chatui.ui.GroupPickContactsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".chatui.ui.PickAtUserActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" /> <!-- 新的朋友邀请消息页面 -->
+        <activity
+            android:name=".chatui.ui.NewFriendsMsgActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" /> <!-- 转发消息用户列表页面 -->
+        <activity
+            android:name=".chatui.ui.ForwardMessageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide"
+            android:windowSoftInputMode="adjustPan" />
+        <!--
+ 自定义的contextmenu, 注意该Activity不能设置orientation，否则在Android 8.0设备上会报
+        java.lang.IllegalStateException: Only fullscreen opaque activities can request orientation
+        -->
+        <activity
+            android:name=".chatui.ui.ContextMenuActivity"
+            android:theme="@style/MyDialogStyle" />
+        <activity
+            android:name=".chatui.ui.UserProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" />
+        <activity
+            android:name=".chatui.ui.SetServersActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" />
+        <activity
+            android:name=".chatui.ui.OfflinePushSettingsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" />
+        <activity
+            android:name=".chatui.ui.CallOptionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/horizontal_slide" />
+        <activity android:name=".ui.act.nutritionist.ActDietitianRegister" />
+        <activity android:name=".ui.act.nutritionist.ActSeniorDietitianApply" />
+        <activity
+            android:name=".ui.act.nutritionist.ActShopRegistration"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.act.nutritionist.ActSeniorNutritionist"
+            android:launchMode="singleTask" />
+        <activity android:name=".ui.act.ActPersionTarchives" />
+        <activity android:name=".ui.act.ActPhysicalExamination" />
+        <activity android:name=".ui.act.nutritionist.ActSchemeActivity" />
+        <activity android:name=".ui.act.nutritionist.ActSchemeCompose" />
+        <activity android:name=".ui.home.ShopActivity" />
+        <activity android:name=".ui.act.nutritionist.ActHealthPark" />
+        <activity android:name=".ui.act.nutritionist.ActHealthyText" />
+        <activity android:name=".ui.act.nutritionist.ActCardDisplay" />
+        <activity
+            android:name=".ui.act.nutritionist.ActMyStudio"
+            android:launchMode="singleTask" />
+        <activity android:name=".ui.act.nutritionist.FriendList" />
+        <activity android:name=".ui.act.nutritionist.ActCreateGroup" />
+        <activity android:name=".ui.act.nutritionist.ActCreateType" />
+        <activity android:name=".ui.act.nutritionist.ActShopIntroduction" />
+        <activity android:name=".ui.act.nutritionist.ActShopDietitian" /> <!-- <activity android:name=".ui.message.EaseChat" /> &lt;!&ndash; 微信 &ndash;&gt; -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" /> <!-- 新浪 -->
+        <activity
+            android:name="com.umeng.socialize.media.WBShareCallBackActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.sina.weibo.sdk.web.WeiboSdkWebActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.sina.weibo.sdk.share.WbShareTransActivity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity> <!-- qq精简版 -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent101553247" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" /> <!-- 微信支付 -->
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" /> <!-- 设置环信应用的AppKey -->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="1102190312098172#jzjsclub" /> <!-- 声明SDK所需的service SDK核心功能 -->
+        <service
+            android:name="com.hyphenate.chat.EMChatService"
+            android:exported="true" />
+        <service
+            android:name="com.hyphenate.chat.EMJobService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" /> <!-- 声明SDK所需的receiver -->
+        <receiver android:name="com.hyphenate.chat.EMMonitorReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+            <!-- 可选filter -->
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver> <!-- mi push -->
+        <service
+            android:name="com.xiaomi.mipush.sdk.PushMessageHandler"
+            android:enabled="true"
+            android:exported="true"
+            tools:ignore="ExportedService" />
+        <service
+            android:name="com.xiaomi.mipush.sdk.MessageHandleService"
+            android:enabled="true" />
+
+        <receiver
+            android:name="com.hyphenate.chat.EMMipushReceiver"
+            android:exported="true"
+            tools:ignore="ExportedReceiver">
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.ERROR" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".push.MIPushReceiver" /> <!-- 百度地图所需的service -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="3ecea51f560650b1ed8a4b99808f52e8" />
+    </application>
+
+</manifest>

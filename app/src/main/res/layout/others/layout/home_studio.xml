@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp_10"
+    android:id="@+id/studio_item"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/studio_image"
+        android:layout_width="173dp"
+        android:layout_height="114dp"
+        android:layout_marginStart="15dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/studio" />
+
+    <TextView
+        android:id="@+id/studio_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="6dp"
+        android:text="店面名"
+        android:textColor="#333333"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/studio_image"
+        app:layout_constraintTop_toTopOf="@+id/studio_image" />
+
+    <TextView
+        android:id="@+id/studio_content"
+        android:layout_width="133dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="内容啊啊啊啊啊啊啊啊"
+        android:textColor="#757575"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/studio_title"
+        app:layout_constraintTop_toBottomOf="@+id/studio_title" />
+
+    <TextView
+        android:id="@+id/studio_jvl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="41dp"
+        android:layout_marginBottom="15dp"
+        android:text="距离"
+        android:textColor="#BFBFBF"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/studio_image"
+        app:layout_constraintStart_toStartOf="@+id/studio_content"
+        app:layout_constraintTop_toBottomOf="@+id/studio_content" />
+
+    <ImageView
+        android:id="@+id/studio_zanimage"
+        android:layout_width="16dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="15dp"
+        app:layout_constraintStart_toEndOf="@+id/studio_mi"
+        app:layout_constraintTop_toTopOf="@+id/studio_jvl"
+        app:srcCompat="@drawable/zan" />
+
+    <TextView
+        android:id="@+id/studio_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textSize="12sp"
+        android:text="3.5"
+        android:textColor="#BFBFBF"
+        app:layout_constraintStart_toEndOf="@+id/studio_zanimage"
+        app:layout_constraintTop_toTopOf="@+id/studio_zanimage" />
+
+    <TextView
+        android:id="@+id/studio_mi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="3.5"
+        android:textColor="#BFBFBF"
+        app:layout_constraintStart_toEndOf="@+id/studio_jvl"
+        app:layout_constraintTop_toTopOf="@+id/studio_jvl" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

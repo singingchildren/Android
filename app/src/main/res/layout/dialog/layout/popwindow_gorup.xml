@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rectangle"
+    android:layout_margin="@dimen/dp_15"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView131"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="是否保存本次编辑？"
+        android:textStyle="bold"
+        android:textColor="@color/helathy_pop_text"
+        android:textSize="@dimen/sp_21"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView132"
+        android:layout_width="117dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginBottom="29dp"
+        android:background="@drawable/no_save"
+        android:gravity="center"
+        android:text="不保存"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/sp_17"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/save"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView131" />
+
+    <TextView
+        android:id="@+id/save"
+        android:layout_width="117dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginBottom="29dp"
+        android:background="@drawable/save"
+        android:gravity="center"
+        android:text="保存"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/sp_17"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView132"
+        app:layout_constraintTop_toBottomOf="@+id/textView131" />
+</androidx.constraintlayout.widget.ConstraintLayout>

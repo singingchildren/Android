@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="food_guide_item">
+        <item>谷薯及杂豆类</item>
+        <item>蔬菜类</item>
+        <item>大豆类</item>
+        <item>蛋类</item>
+        <item>水产品类</item>
+        <item>禽畜肉类</item>
+        <item>乳类</item>
+        <item>水果类</item>
+        <item>油脂类</item>
+        <item>水</item>
+    </string-array>
+    <integer-array name="food_guide_item_icon">
+        <item>@drawable/food_item0</item>
+        <item>@drawable/food_item1</item>
+        <item>@drawable/food_item2</item>
+        <item>@drawable/food_item3</item>
+        <item>@drawable/food_item4</item>
+        <item>@drawable/food_item5</item>
+        <item>@drawable/food_item6</item>
+        <item>@drawable/food_item7</item>
+        <item>@drawable/food_item8</item>
+        <item>@drawable/food_item9</item>
+    </integer-array>
+</resources>

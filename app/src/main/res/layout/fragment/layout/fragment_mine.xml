@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color">
+
+
+        <!--头部布局-->
+        <RelativeLayout
+            android:id="@+id/rl_mine"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_141"
+            android:background="#14C46C"
+            android:padding="@dimen/dp_14"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+            <!--客服按钮-->
+            <ImageView
+                android:id="@+id/service"
+                android:layout_width="@dimen/dp_23"
+                android:layout_height="@dimen/dp_23"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_14"
+                android:src="@drawable/service"
+                android:visibility="invisible"/>
+            <!--头像-->
+            <ImageView
+                android:id="@+id/head"
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:layout_marginLeft="@dimen/dp_2"
+                android:layout_marginTop="@dimen/dp_10"
+                android:scaleType="centerCrop"
+                android:src="@drawable/my3" />
+
+            <!--认证标志-->
+            <TextView
+                android:id="@+id/tv_logo_authentication"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="去认证"
+                android:gravity="center"
+                android:textColor="@color/white_255"
+                android:textSize="@dimen/sp_14"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginLeft="@dimen/dp_6"
+                android:layout_below="@id/head"
+                android:visibility="gone"
+                android:background="@drawable/icon_authentication" />
+
+
+            <!--用户名-->
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="@dimen/dp_200"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:layout_marginStart="@dimen/dp_14"
+                android:layout_toRightOf="@+id/head"
+                android:layout_alignTop="@+id/head"
+                android:text="请输入用户名"
+                android:textColor="@color/write"
+                android:textSize="@dimen/sp_18"
+
+                />
+            <!--个性签名-->
+            <TextView
+                android:id="@+id/Asign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="@dimen/dp_210"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:layout_marginTop="@dimen/dp_8"
+                android:text="请输入个性签名"
+                android:textColor="@color/write"
+                android:layout_alignLeft="@+id/username"
+                android:layout_below="@+id/username"
+                android:textSize="@dimen/dp_14" />
+            <!--编辑-->
+            <TextView
+                android:id="@+id/compile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_32"
+                android:layout_alignRight="@+id/service"
+                android:layout_below="@+id/service"
+                android:text="编辑"
+                android:textColor="@color/write"
+                android:textSize="@dimen/sp_15"
+                />
+
+            <!--会员log个到期时间（1）-->
+            <ImageView
+                android:id="@+id/iv_logo_vip_mine"
+                android:layout_width="@dimen/dp_16"
+                android:layout_height="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_9"
+                android:src="@drawable/huiyuan"
+                android:visibility="gone"
+                android:layout_alignLeft="@+id/Asign"
+                android:layout_below="@+id/Asign"
+                />
+            <TextView
+                android:id="@+id/tv_vip_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#F4F4F4"
+                android:visibility="gone"
+                android:textSize="9sp"
+                android:background="@drawable/yuanjiao"
+                android:gravity="center"
+                android:padding="@dimen/dp_2"
+                android:layout_marginLeft="@dimen/dp_7"
+                android:layout_toRightOf="@+id/iv_logo_vip_mine"
+                android:layout_alignTop="@+id/iv_logo_vip_mine"/>
+
+            <!--会员log个到期时间（2）-->
+            <ImageView
+                android:id="@+id/iv_logo_vip_mine2"
+                android:layout_width="@dimen/dp_16"
+                android:layout_height="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_7"
+                android:visibility="gone"
+                android:src="@drawable/huiyuan"
+                android:layout_alignLeft="@+id/Asign"
+                android:layout_below="@+id/iv_logo_vip_mine"
+               />
+            <TextView
+                android:id="@+id/tv_vip_time2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#F4F4F4"
+                android:textSize="9sp"
+                android:padding="@dimen/dp_2"
+                android:visibility="gone"
+                android:background="@drawable/yuanjiao"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/dp_7"
+                android:layout_toRightOf="@+id/iv_logo_vip_mine2"
+                android:layout_alignTop="@+id/iv_logo_vip_mine2"
+              />
+
+
+        </RelativeLayout>
+
+
+        <!--一组点击条目-->
+        <TextView
+            android:id="@+id/tv1_mine"
+            android:paddingLeft="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_below="@+id/rl_mine"
+            android:text="@string/my_order"
+            style="@style/tv_mine"
+            />
+        <ImageView
+            android:id="@+id/iv1_mine"
+            android:layout_alignRight="@+id/tv1_mine"
+            android:layout_alignTop="@+id/tv1_mine"
+            style="@style/iv_mine"/>
+
+        <TextView
+            android:id="@+id/tv2_mine"
+            android:paddingLeft="@dimen/dp_15"
+            android:layout_below="@+id/tv1_mine"
+            android:text="@string/service_needs"
+            style="@style/tv_mine"
+            />
+        <ImageView
+            android:layout_alignRight="@+id/tv2_mine"
+            android:layout_alignTop="@+id/tv2_mine"
+            style="@style/iv_mine"/>
+
+        <TextView
+            android:id="@+id/tv_collect_mine"
+            android:paddingLeft="@dimen/dp_15"
+            android:layout_below="@+id/tv2_mine"
+            android:text="我的收藏"
+            style="@style/tv_mine"
+            />
+        <ImageView
+            android:id="@+id/iv_collect_mine"
+            android:layout_alignRight="@+id/tv_collect_mine"
+            android:layout_alignTop="@+id/tv_collect_mine"
+            style="@style/iv_mine"/>
+
+        <TextView
+            android:id="@+id/tv_code_mine"
+            android:paddingLeft="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_below="@+id/tv_collect_mine"
+            android:text="我的邀请码 "
+            style="@style/tv_mine"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/tv_code_mine"
+            android:layout_alignTop="@+id/tv_code_mine"
+            android:layout_marginTop="@dimen/dp_19"
+            android:layout_marginRight="@dimen/dp_15"
+            android:clickable="false"
+            android:background="@null"
+            android:text="复制"
+            android:textSize="@dimen/dp_13"/>
+
+        <TextView
+            android:id="@+id/tv_import_mine"
+            android:paddingLeft="@dimen/dp_15"
+            android:layout_below="@+id/tv_code_mine"
+            android:text="输入邀请码"
+            style="@style/tv_mine"
+            />
+        <ImageView
+            android:id="@+id/iv_import_mine"
+            android:layout_alignRight="@+id/tv_import_mine"
+            android:layout_alignTop="@+id/tv_import_mine"
+            style="@style/iv_mine"/>
+
+        <TextView
+            android:id="@+id/tv_about_us_mine"
+            android:paddingLeft="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_15"
+            android:layout_below="@+id/tv_import_mine"
+            android:text="关于我们"
+            style="@style/tv_mine"
+            />
+        <ImageView
+            android:layout_alignRight="@+id/tv_about_us_mine"
+            android:layout_alignTop="@+id/tv_about_us_mine"
+            style="@style/iv_mine"/>
+
+        <TextView
+            android:id="@+id/tv_versions_mine"
+            android:paddingLeft="@dimen/dp_15"
+            android:layout_below="@+id/tv_about_us_mine"
+            android:text="版本更新"
+            style="@style/tv_mine"
+            />
+        <ImageView
+            android:layout_alignRight="@+id/tv_versions_mine"
+            android:layout_alignTop="@+id/tv_versions_mine"
+            style="@style/iv_mine"/>
+
+        <TextView
+            android:id="@+id/tv_account_mine"
+            android:paddingLeft="@dimen/dp_15"
+            android:layout_below="@+id/tv_versions_mine"
+            android:text="切换账号"
+            style="@style/tv_mine"
+            />
+        <ImageView
+            android:id="@+id/iv_account_mine"
+            android:layout_alignRight="@+id/tv_account_mine"
+            android:layout_alignTop="@+id/tv_account_mine"
+            style="@style/iv_mine"/>
+
+        <TextView
+            android:id="@+id/tv_phone_mine"
+            android:paddingLeft="@dimen/dp_15"
+            android:layout_below="@+id/tv_account_mine"
+            android:text="更改绑定手机号"
+            style="@style/tv_mine"
+            />
+        <ImageView
+            android:id="@+id/iv_phone_mine"
+            android:layout_alignRight="@+id/tv_phone_mine"
+            android:layout_alignTop="@+id/tv_phone_mine"
+            style="@style/iv_mine"/>
+
+    </RelativeLayout>
+</ScrollView>
+
+
